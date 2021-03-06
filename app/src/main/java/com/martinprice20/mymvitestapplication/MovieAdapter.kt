@@ -6,9 +6,19 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MovieAdapter(private val movies: MutableList<MovieMaker.Movie>, private val listener: ItemListener) :
+class MovieAdapter(movies: MutableList<MovieMaker.Movie>, private val listener: ItemListener) :
 RecyclerView.Adapter<MovieAdapter.ViewHolder>()
 {
+    private var data = listOf<MovieMaker.Movie>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
+    init {
+        data = movies
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView
         val director: TextView
@@ -32,13 +42,13 @@ RecyclerView.Adapter<MovieAdapter.ViewHolder>()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = movies[position].name
-        holder.director.text = movies[position].director
-        holder.year.text = movies[position].year
-        holder.itemView.setOnClickListener{listener.onItemClick(movies[position])}
+        holder.name.text = data[position].name
+        holder.director.text = data[position].director
+        holder.year.text = data[position].year
+        holder.itemView.setOnClickListener{listener.onItemClick(data[position])}
     }
 
     override fun getItemCount(): Int {
-        return movies.size
+        return data.size
     }
 }
