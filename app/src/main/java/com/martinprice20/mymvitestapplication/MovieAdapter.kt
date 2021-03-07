@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MovieAdapter(movies: MutableList<MovieMaker.Movie>, private val listener: ItemListener) :
+class MovieAdapter(private val listener: ItemListener) :
 RecyclerView.Adapter<MovieAdapter.ViewHolder>()
 {
-    private var data = listOf<MovieMaker.Movie>()
+    var data = listOf<MovieMaker.Movie>()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
     init {
-        data = movies
+
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
