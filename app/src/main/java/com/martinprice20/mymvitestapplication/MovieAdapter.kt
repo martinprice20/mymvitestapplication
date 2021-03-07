@@ -15,20 +15,10 @@ RecyclerView.Adapter<MovieAdapter.ViewHolder>()
             notifyDataSetChanged()
         }
 
-    init {
-
-    }
-
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name: TextView
-        val director: TextView
-        val year: TextView
-
-        init {
-            name = itemView.findViewById(R.id.movie_name)
-            director = itemView.findViewById(R.id.movie_director)
-            year = itemView.findViewById(R.id.movie_year)
-        }
+        val name: TextView = itemView.findViewById(R.id.movie_name)
+        val director: TextView = itemView.findViewById(R.id.movie_director)
+        val year: TextView = itemView.findViewById(R.id.movie_year)
     }
 
    interface ItemListener {

@@ -2,7 +2,7 @@ package com.martinprice20.mymvitestapplication
 
 class MovieMaker {
 
-    val movieList: List<Movie>
+    private val movieList: List<Movie>
 
     init {
         val movieOne = Movie("Blade Runner", "Ridley Scott", "1982")
