@@ -11,4 +11,4 @@ data class Rating (
 
     @SerializedName("Value")
     val value: String
-    ) : Parcelable {}
+    ) : Parcelable

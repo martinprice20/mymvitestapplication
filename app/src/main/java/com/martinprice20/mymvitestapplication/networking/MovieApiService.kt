@@ -14,10 +14,7 @@ interface MovieApiService {
     @GET
     fun getMovieById(@Query("i") id: String) : Single<MovieMaker.Movie>
 
-
-    @GET
-    fun searchMoviesByTitle(@Query("s") title: String) : Single<MovieSearchWrapper>
-
+    
 
 
 }

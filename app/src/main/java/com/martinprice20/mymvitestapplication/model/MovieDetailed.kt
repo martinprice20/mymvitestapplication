@@ -1,170 +1,85 @@
 package com.martinprice20.mymvitestapplication.model
 
+import android.os.Parcelable
 import com.google.auto.value.AutoValue
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-@AutoValue
-abstract class MovieDetailed {
+@Parcelize
+data class MovieDetailed (
 
     @SerializedName("Title")
-    abstract fun getTitle():String
+    val title: String,
 
     @SerializedName("Year")
-    abstract fun getYear():String
+    val year: String,
 
     @SerializedName("Rated")
-    abstract fun getRating():String
+    val rating: String,
 
     @SerializedName("Released")
-    abstract fun getReleased():String
+    val released: String,
 
     @SerializedName("Runtime")
-    abstract fun getRuntime():String
+    val runtime: String,
 
     @SerializedName("Genre")
-    abstract fun getGenre():String
+    val genre: String,
 
     @SerializedName("Director")
-    abstract fun getDirector():String
+    val director: String,
 
     @SerializedName("Writer")
-    abstract fun getWriter():String
+    val writer: String,
 
     @SerializedName("Actors")
-    abstract fun getActors():String
+    val actors: String,
 
     @SerializedName("Plot")
-    abstract fun getPlot():String
+    val plot: String,
 
     @SerializedName("Language")
-    abstract fun getLanguage():String
+    val language: String,
 
     @SerializedName("Country")
-    abstract fun getCountry():String
+    val country: String,
 
     @SerializedName("Awards")
-    abstract fun getAwards():String
+    val awards: String,
 
     @SerializedName("Poster")
-    abstract fun getPoster():String
+    val posterUrl :String,
 
     @SerializedName("Ratings")
-    abstract fun getRatings():List<Rating>
+    val ratingsList: List<Rating>,
 
     @SerializedName("Metascore")
-    abstract fun getMetascore():String
+    val metascore: String,
 
     @SerializedName("imdbRating")
-    abstract fun getImbdbRating():String
+    val imbdbRating: String,
 
     @SerializedName("imdbVbotes")
-    abstract fun getImdbVotes():String
+    val imdbVotes: String,
 
     @SerializedName("imdbID")
-    abstract fun getImdbID():String
+    val imdbID: String,
 
     @SerializedName("Type")
-    abstract fun getType():String
+    val type: String,
 
     @SerializedName("DVD")
+    val dvd: String,
 
-    abstract fun getDVD():String
     @SerializedName("BoxOffice")
-
-    abstract fun getBoxOffice():String
+    val boxOffice: String,
 
     @SerializedName("Production")
-    abstract fun getProduction():String
+    val production :String,
 
     @SerializedName("Website")
-    abstract fun getWebsite():String
+    val website: String,
 
     @SerializedName("Response")
-    abstract fun getResponse():String
-
-
-    open fun builder(): MovieDetailed.Builder {
-        return AutoValue_MovieDetailed.Builder()
-    }
-
-    @AutoValue.Builder
-    abstract class Builder {
-
-        @SerializedName("Title")
-        abstract fun setTitle(title: String): Builder
-
-        @SerializedName("Year")
-        abstract fun setYear(year: String): Builder
-
-        @SerializedName("Rated")
-        abstract fun setRating(rating: String): Builder
-
-        @SerializedName("Released")
-        abstract fun setReleased(released: String): Builder
-
-        @SerializedName("Runtime")
-        abstract fun setRuntime(runtime: String): Builder
-
-        @SerializedName("Genre")
-        abstract fun setGenre(genre: String): Builder
-
-        @SerializedName("Director")
-        abstract fun setDirector(director: String): Builder
-
-        @SerializedName("Writer")
-        abstract fun setWriter(writer: String): Builder
-
-        @SerializedName("Actors")
-        abstract fun setActors(actors: String): Builder
-
-        @SerializedName("Plot")
-        abstract fun setPlot(plot: String): Builder
-
-        @SerializedName("Language")
-        abstract fun setLanguage(lang: String): Builder
-
-        @SerializedName("Country")
-        abstract fun setCountry(country: String): Builder
-
-        @SerializedName("Awards")
-        abstract fun setAwards(awards: String): Builder
-
-        @SerializedName("Poster")
-        abstract fun setPoster(poster: String): Builder
-
-        @SerializedName("Ratings")
-        abstract fun setRatings(ratings: List<Rating>): Builder
-
-        @SerializedName("Metascore")
-        abstract fun setMetascore(metascore: String):Builder
-
-        @SerializedName("imdbRating")
-        abstract fun setImbdbRating(rating: String):Builder
-
-        @SerializedName("imdbVotes")
-        abstract fun setImdbVotes(votes: String): Builder
-
-        @SerializedName("imdbID")
-        abstract fun setImdbID(id: String): Builder
-
-        @SerializedName("Type")
-        abstract fun setType(type: String): Builder
-
-        @SerializedName("DVD")
-        abstract fun setDVD(dvd: String): Builder
-
-        @SerializedName("BoxOffice")
-        abstract fun setBoxOffice(box: String): Builder
-
-        @SerializedName("Production")
-        abstract fun setProduction(production: String): Builder
-
-        @SerializedName("Website")
-        abstract fun setWebsite(website: String): Builder
-
-        @SerializedName("Response")
-        abstract fun setResponse(response: String): Builder
-
-        abstract fun build() : MovieDetailed
-    }
-}
+    val response: String
+) : Parcelable {}
