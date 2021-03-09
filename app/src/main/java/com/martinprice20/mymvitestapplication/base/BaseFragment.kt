@@ -3,7 +3,7 @@ package com.martinprice20.mymvitestapplication.base
 import androidx.fragment.app.Fragment
 import io.reactivex.disposables.CompositeDisposable
 
-class BaseFragment : Fragment() {
+open class BaseFragment : Fragment() {
     val disposable = CompositeDisposable()
 
 

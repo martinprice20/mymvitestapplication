@@ -13,7 +13,8 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule() {
-    var baseUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=d0819c9e"
+    var baseUrl = "http://www.omdbapi.com/?S=gladiator&apikey=d0819c9e"
+    var apiKey ="d0819c9e"
 
     @Singleton
     @Provides
