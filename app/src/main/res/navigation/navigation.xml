@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.martinprice20.mymvitestapplication.StartFragment"
+        android:name="com.martinprice20.mymvitestapplication.views.start_view.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.martinprice20.mymvitestapplication.SearchFragment"
+        android:name="com.martinprice20.mymvitestapplication.views.search_view.SearchFragment"
         android:label="SearchFragment" >
         <action
             android:id="@+id/action_searchFragment_to_searchResultsFragment"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchResultsFragment"
-        android:name="com.martinprice20.mymvitestapplication.SearchResultsFragment"
+        android:name="com.martinprice20.mymvitestapplication.views.search_results_view.SearchResultsFragment"
         android:label="SearchResultsFragment" >
         <action
             android:id="@+id/action_searchResultsFragment_to_movieDetailFragment"
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        android:name="com.martinprice20.mymvitestapplication.MovieDetailFragment"
+        android:name="com.martinprice20.mymvitestapplication.views.movie_detail_view.MovieDetailFragment"
         android:label="MovieDetailFragment" >
         <action
             android:id="@+id/action_movieDetailFragment_to_searchResultsFragment"

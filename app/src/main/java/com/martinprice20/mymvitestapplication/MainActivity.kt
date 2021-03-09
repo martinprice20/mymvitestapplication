@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.martinprice20.mymvitestapplication.views.search_results_view.MovieAdapter
 
 class MainActivity : AppCompatActivity(), MovieAdapter.ItemListener {
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity(), MovieAdapter.ItemListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 //        progress = findViewById(R.id.progress_bar)
 //        recyclerView = findViewById(R.id.movie_list_recycler)
 //        movieList = mutableListOf()

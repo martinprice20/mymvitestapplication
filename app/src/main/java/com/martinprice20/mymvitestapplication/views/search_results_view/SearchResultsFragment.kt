@@ -1,12 +1,13 @@
-package com.martinprice20.mymvitestapplication
+package com.martinprice20.mymvitestapplication.views.search_results_view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.martinprice20.mymvitestapplication.R
 import com.martinprice20.mymvitestapplication.base.BaseFragment
 
-class MovieDetailFragment : BaseFragment() {
+class SearchResultsFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +19,7 @@ class MovieDetailFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie_detail, container, false)
+        return inflater.inflate(R.layout.fragment_search_results, container, false)
     }
 
 
